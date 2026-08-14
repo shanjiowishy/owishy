@@ -1,0 +1,112 @@
+media:
+  - name: blog_images
+    label: Blog images
+    input: public/images/blog
+    output: /images/blog
+    rename: safe
+    extensions: [jpg, jpeg, png, webp, gif]
+
+content:
+  - name: blog
+    label: Blog articles
+    type: collection
+    path: src/content/blog
+    filename: "{primary}.md"
+    view:
+      fields: [title, publishedDate, draft]
+      primary: title
+      sort: [publishedDate, title]
+      default:
+        sort: publishedDate
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Summary, type: text, required: true }
+      - name: publishedDate
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: updatedDate
+        label: Updated date
+        type: date
+        required: false
+        options:
+          format: yyyy-MM-dd
+      - { name: author, label: Author, type: string, default: Shanjida Farzana Owishy }
+      - { name: tags, label: Tags, type: string, list: true }
+      - name: cover
+        label: Cover image
+        type: image
+        required: false
+        options:
+          media: blog_images
+      - { name: coverAlt, label: Cover description, type: string, required: false }
+      - { name: draft, label: Draft, type: boolean, default: true }
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          media: blog_images
+          path: public/images/blog
+          rename: safe
+
+  - name: profile
+    label: Profile and CV content
+    type: file
+    path: src/data/profile.json
+    format: json
+    fields:
+      - { name: name, label: Full name, type: string }
+      - { name: eyebrow, label: Short descriptor, type: string }
+      - { name: headline, label: Headline, type: string }
+      - { name: intro, label: Introduction, type: text }
+      - { name: about, label: Biography, type: text }
+      - { name: email, label: Primary email, type: string }
+      - { name: secondaryEmail, label: University email, type: string, required: false }
+      - { name: phone, label: Phone, type: string }
+      - { name: location, label: Location, type: string }
+      - { name: linkedin, label: LinkedIn URL, type: string }
+      - name: research
+        label: Funded research
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: funder, label: Funder, type: string }
+          - { name: description, label: Description, type: text }
+      - name: experience
+        label: Experience
+        type: object
+        list: true
+        fields:
+          - { name: period, label: Period, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: organization, label: Organization, type: string }
+          - { name: description, label: Description, type: text }
+      - name: education
+        label: Education
+        type: object
+        list: true
+        fields:
+          - { name: degree, label: Degree, type: string }
+          - { name: school, label: Institution, type: string }
+          - { name: period, label: Period, type: string }
+          - { name: grade, label: Grade, type: string }
+          - { name: award, label: Award, type: string }
+      - name: skills
+        label: Skills
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Category, type: string }
+          - { name: items, label: Items, type: string }
+      - name: conferences
+        label: Conferences
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Paper title, type: text }
+          - { name: venue, label: Venue, type: string }
+      - { name: courses, label: Short courses, type: string, list: true }

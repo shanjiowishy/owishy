@@ -1,6 +1,6 @@
 # Shanjida Farzana Owishy — Portfolio
 
-A professional public-health research portfolio built with Astro and adapted from the narrow, content-first architecture of Astro Narrow. Content is editable through Decap CMS and deploys to GitHub Pages.
+A professional public-health research portfolio built with Astro and adapted from the narrow, content-first architecture of Astro Narrow. Content is editable through Pages CMS and deploys to GitHub Pages.
 
 ## Local development
 
@@ -9,13 +9,14 @@ pnpm install
 pnpm dev
 ```
 
-The site runs at `http://localhost:4321`. The Decap editor is at `/admin/`; for local CMS editing, run `npx decap-server` in a second terminal.
+The site runs at `http://localhost:4321`.
 
-## Decap CMS setup
+## Pages CMS
 
-1. In `public/admin/config.yml`, replace `YOUR_GITHUB_USERNAME/Owishy-Website` with the final GitHub `owner/repository`.
-2. Configure a GitHub OAuth provider for Decap CMS and add its `base_url` and `auth_endpoint` under `backend`, or use a compatible hosted authentication service.
-3. Commit the configuration. Editors can then sign in at the deployed `/admin/` route and propose content changes through the editorial workflow.
+1. Sign in at [Pages CMS](https://app.pagescms.org/) with GitHub.
+2. Select the `shanjiowishy/owishy` repository and the `main` branch.
+3. Edit blog articles or structured profile content. Pages CMS reads `.pages.yml` from the repository root and commits saved changes to GitHub.
+4. Each commit triggers the included GitHub Pages workflow automatically.
 
 ## GitHub Pages
 

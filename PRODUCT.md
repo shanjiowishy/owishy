@@ -26,7 +26,7 @@ No generic personal-brand hero, initials monogram, promotional call-to-action la
 2. Put funded work, methods, and research outputs before general career chronology.
 3. Make evidence easy to scan while preserving enough context to remain accurate.
 4. Use motion to clarify navigation, theme changes, and reading order—not to decorate every section.
-5. Keep editing practical through structured content and Decap CMS.
+5. Keep editing practical through structured content and Pages CMS.
 
 ## Accessibility & Inclusion
 
