@@ -1,0 +1,27 @@
+---
+import '../styles/portfolio.css';
+import '../styles/mobile-menu.css';
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<!doctype html><html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content={description} /><meta name="theme-color" content="#fafdff" />
+  <script is:inline>(()=>{const saved=localStorage.getItem('theme');const theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;})();</script>
+  <link rel="icon" href={`${base}favicon.svg`} /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" /><title>{title}</title>
+</head><body><a class="skip-link" href="#main">Skip to content</a><slot />
+<script is:inline>
+  document.documentElement.classList.add('motion-ready');
+  const themeToggle=document.querySelector('[data-theme-toggle]');
+  const syncTheme=()=>{if(!themeToggle)return;const dark=document.documentElement.dataset.theme==='dark';themeToggle.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');themeToggle.setAttribute('aria-pressed',String(dark));document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#151515':'#fafdff');};
+  syncTheme();themeToggle?.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;document.documentElement.style.colorScheme=next;localStorage.setItem('theme',next);syncTheme();});
+  const observer=new IntersectionObserver((entries)=>entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.15});document.querySelectorAll('[data-reveal]').forEach((element)=>observer.observe(element));
+  const header=document.querySelector('.site-header');const marker=document.querySelector('[data-header-marker]');if(marker)new IntersectionObserver(([entry])=>header?.classList.toggle('is-scrolled',!entry.isIntersecting)).observe(marker);
+  const menuButton=document.querySelector('[data-menu-toggle]');const mobileMenu=document.querySelector('[data-mobile-menu]');
+  const closeMenu=()=>{mobileMenu?.removeAttribute('data-open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Open navigation menu');};
+  const openMenu=()=>{mobileMenu?.setAttribute('data-open','');menuButton?.setAttribute('aria-expanded','true');menuButton?.setAttribute('aria-label','Close navigation menu');};
+  menuButton?.addEventListener('click',()=>menuButton.getAttribute('aria-expanded')==='true'?closeMenu():openMenu());mobileMenu?.querySelectorAll('a').forEach((link)=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',(event)=>{if(event.key==='Escape'){closeMenu();menuButton?.focus();}});document.addEventListener('click',(event)=>{if(menuButton?.getAttribute('aria-expanded')==='true'&&!header?.contains(event.target))closeMenu();});matchMedia('(min-width: 761px)').addEventListener('change',(event)=>{if(event.matches)closeMenu();});
+</script></body></html>

@@ -1,0 +1,33 @@
+{
+  "name": "Shanjida Farzana Owishy",
+  "eyebrow": "Public Health Researcher · Dhaka",
+  "headline": "Research for healthier, more equitable communities.",
+  "intro": "Microbiology, epidemiology and qualitative research—from fieldwork to evidence.",
+  "about": "Public Health Researcher with expertise in microbiology, epidemiology, and qualitative research. I manage the full research cycle for donor-funded projects—from proposals and field-based studies to reports and peer-reviewed manuscripts.",
+  "email": "shanjida09owishy@gmail.com", "secondaryEmail": "shanjida.owishy.232@northsouth.edu", "phone": "01679594918", "location": "Dhaka, Bangladesh", "linkedin": "https://www.linkedin.com/in/shanjida-farzana-owishy-5068b0250",
+  "research": [
+    { "title": "HPV Vaccine Coverage Survey 2025", "funder": "World Health Organization (WHO)", "description": "A national public-health study supporting evidence on vaccine coverage and implementation." },
+    { "title": "Formative Research on Intrauterine Device (IUD) in Bangladesh", "funder": "Jhpiego & UNFPA", "description": "Qualitative research exploring experiences, barriers and facilitators surrounding IUD uptake." },
+    { "title": "Food Security Disparities & Price Fluctuations", "funder": "CTRG 2024–2025 Research Grant", "description": "Research into regional disparities and the impact of food-price fluctuations on food security." }
+  ],
+  "experience": [
+    { "period": "Aug 2025—Present", "role": "Guest Worker (Research)", "organization": "NSU Global Health Institute, NSU", "description": "Develops proposals, coordinates submissions and stakeholder activities, supports manuscripts, and conducts and analyzes qualitative field research." },
+    { "period": "Jan—Jul 2025", "role": "Research Assistant", "organization": "NSU Global Health Institute, NSU", "description": "Developed proposals, budgets and data-collection tools; conducted KII, IDI, FGD and quantitative data collection; supported ethics and reporting." },
+    { "period": "Jul—Dec 2024", "role": "Graduate Assistant", "organization": "Department of Public Health, NSU", "description": "Supported teaching, assessment, records and module development while tutoring and mentoring students." },
+    { "period": "Feb—Sep 2024", "role": "Lecturer (Part-time)", "organization": "Green Field School & College", "description": "Delivered biology lessons and developed instructional materials, quizzes, tests and assessments." },
+    { "period": "Nov 2022—Mar 2023", "role": "Intern", "organization": "Environmental Intervention Unit, ICDDR’B", "description": "Supported literature review, reporting, manuscript development and transcription, and attended Asia Shelter Forum 2022." },
+    { "period": "Oct 2021—Dec 2022", "role": "Research Assistant", "organization": "Department of Biochemistry & Microbiology, NSU", "description": "Presented research, guided thesis students and conducted microbiological laboratory activities." }
+  ],
+  "education": [
+    { "degree": "Master of Public Health (MPH)", "school": "North South University", "period": "2023—2024", "grade": "GPA 3.73 / 4.00", "award": "100% scholarship" },
+    { "degree": "Bachelor of Science in Microbiology", "school": "North South University", "period": "2018—2022", "grade": "GPA 3.15 / 4.00", "award": "100% scholarship" }
+  ],
+  "skills": [
+    { "label": "Quantitative tools", "items": "Stata · SPSS · Microsoft Excel" }, { "label": "Qualitative methods", "items": "FGD · KII · IDI · Thematic analysis" }, { "label": "Research cycle", "items": "Study design · Fieldwork · Analysis · Proposals · Reporting · Manuscripts" }, { "label": "Languages", "items": "Bangla · English" }
+  ],
+  "conferences": [
+    { "title": "Effect of Metal-Ions on the Enzymatic Efficiency of Amylase and Protease from Producer KTH 205", "venue": "International Biotechnology Conference, ICB 2025 · BRAC University" },
+    { "title": "Characterization of Amylase Producing Bacteria Isolated from Soil Sample", "venue": "2nd International Conference on Genomics, Nanotech and Bioengineering, ICGNB 2022 · North South University" }
+  ],
+  "courses": ["Research Design and Tools for Assessing Brain Vulnerability in Human Subjects · Jan 2026", "Systematic Review & Meta Analysis, NGHI · Nov 2025", "Workshop on Scientific Manuscript Writing, NGHI · Mar 2025", "Research4Life: Hinari & e-research, ICDDR’B · Dec 2022"]
+}

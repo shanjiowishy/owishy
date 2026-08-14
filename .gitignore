@@ -1,0 +1,14 @@
+# build output
+dist/
+.astro/
+node_modules/
+tmp/
+*.log
+.env
+.env.production
+.DS_Store
+.idea/
+.codex
+.agents
+.claude
+.vscode

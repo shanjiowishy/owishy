@@ -1,0 +1,15 @@
+---
+import { getCollection, render } from 'astro:content';
+import PortfolioLayout from '../../layouts/PortfolioLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+export async function getStaticPaths(){const posts=await getCollection('blog',({data})=>!data.draft);return posts.map((post)=>({params:{slug:post.id},props:{post}}));}
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const published = post.data.publishedDate.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+---
+<PortfolioLayout title={`${post.data.title} · Shanjida Farzana Owishy`} description={post.data.description}>
+  <SiteHeader />
+  <main id="main"><article class="article-shell"><header class="article-header"><a class="back-link" href={`${base}blog/`}>← Blog</a><div class="post-meta"><time datetime={post.data.publishedDate.toISOString()}>{published}</time><span>{post.data.tags.join(' · ')}</span></div><h1>{post.data.title}</h1><p class="article-deck">{post.data.description}</p><p class="article-byline">By {post.data.author}</p></header><div class="article-layout"><aside class="article-aside"><span>Contents</span>{headings.filter((heading)=>heading.depth===2).map((heading)=><a href={`#${heading.slug}`}>{heading.text}</a>)}</aside><div class="article-prose"><Content /></div></div></article></main>
+  <footer><span>© {new Date().getFullYear()} Shanjida Farzana Owishy</span><a href={`${base}blog/`}>Blog</a></footer>
+</PortfolioLayout>

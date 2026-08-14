@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: shanjiowishy/owishy
+  branch: main
+
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Article
+    folder: src/content/blog
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}} · {{publishedDate}}"
+    sortable_fields: [publishedDate, title]
+    view_filters:
+      - { label: Drafts, field: draft, pattern: true }
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Summary, name: description, widget: text, hint: Used on the blog listing and in search previews. }
+      - { label: Publication date, name: publishedDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+      - { label: Updated date, name: updatedDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD, required: false }
+      - { label: Author, name: author, widget: string, default: Shanjida Farzana Owishy }
+      - { label: Tags, name: tags, widget: list, default: [Public Health] }
+      - { label: Cover image, name: cover, widget: image, required: false }
+      - { label: Cover description, name: coverAlt, widget: string, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: Article, name: body, widget: markdown }
+  - name: portfolio
+    label: Portfolio
+    files:
+      - name: profile
+        label: Profile & CV content
+        file: src/data/profile.json
+        format: json
+        fields:
+          - { label: Full name, name: name, widget: string }
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Introduction, name: intro, widget: text }
+          - { label: About, name: about, widget: text }
+          - { label: Primary email, name: email, widget: string }
+          - { label: University email, name: secondaryEmail, widget: string, required: false }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Location, name: location, widget: string }
+          - { label: LinkedIn URL, name: linkedin, widget: string }
+          - label: Funded research
+            name: research
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Funder, name: funder, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Experience
+            name: experience
+            widget: list
+            fields:
+              - { label: Period, name: period, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Organization, name: organization, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Education
+            name: education
+            widget: list
+            fields:
+              - { label: Degree, name: degree, widget: string }
+              - { label: School, name: school, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: Grade, name: grade, widget: string }
+              - { label: Award, name: award, widget: string }
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - { label: Category, name: label, widget: string }
+              - { label: Items, name: items, widget: string }
+          - label: Conferences
+            name: conferences
+            widget: list
+            fields:
+              - { label: Paper title, name: title, widget: text }
+              - { label: Venue, name: venue, widget: string }
+          - { label: Selected short courses, name: courses, widget: list }
