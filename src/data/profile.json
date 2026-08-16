@@ -1,33 +1,182 @@
 {
   "name": "Shanjida Farzana Owishy",
   "eyebrow": "Public Health Researcher · Dhaka",
-  "headline": "Research for healthier, more equitable communities.",
-  "intro": "Microbiology, epidemiology and qualitative research—from fieldwork to evidence.",
-  "about": "Public Health Researcher with expertise in microbiology, epidemiology, and qualitative research. I manage the full research cycle for donor-funded projects—from proposals and field-based studies to reports and peer-reviewed manuscripts.",
-  "email": "shanjida09owishy@gmail.com", "secondaryEmail": "shanjida.owishy.232@northsouth.edu", "phone": "01679594918", "location": "Dhaka, Bangladesh", "linkedin": "https://www.linkedin.com/in/shanjida-farzana-owishy-5068b0250",
+  "headline": "Public Health Researcher",
+  "intro": "Environmental and nutritional epidemiology, mixed-methods research, and health equity.",
+  "about": "Public health researcher with experience across environmental health, WASH, maternal and reproductive health, infectious disease, non-communicable disease, and mixed-methods studies. Skilled in developing research tools, conducting qualitative and quantitative fieldwork, analyzing data, and preparing reports and manuscripts.",
+  "email": "shanjida09owishy@gmail.com",
+  "secondaryEmail": "farzana.owishy@icddrb.org",
+  "phone": "+880 1679-594918",
+  "location": "Dhaka, Bangladesh",
+  "linkedin": "https://www.linkedin.com/in/shanjida-farzana-owishy-5068b0250/",
+  "researchInterests": [
+    "Environmental epidemiology",
+    "Nutritional epidemiology",
+    "Non-communicable diseases",
+    "Maternal health",
+    "Reproductive health",
+    "Infectious diseases",
+    "Mental health",
+    "Health disparities and health equity"
+  ],
   "research": [
-    { "title": "HPV Vaccine Coverage Survey 2025", "funder": "World Health Organization (WHO)", "description": "A national public-health study supporting evidence on vaccine coverage and implementation." },
-    { "title": "Formative Research on Intrauterine Device (IUD) in Bangladesh", "funder": "Jhpiego & UNFPA", "description": "Qualitative research exploring experiences, barriers and facilitators surrounding IUD uptake." },
-    { "title": "Food Security Disparities & Price Fluctuations", "funder": "CTRG 2024–2025 Research Grant", "description": "Research into regional disparities and the impact of food-price fluctuations on food security." }
+    {
+      "title": "Co-Designing a Flood Early Warning System for Informal Settlements in Bangladesh",
+      "funder": "Environmental Health and WASH, icddr,b",
+      "description": "Qualitative research involving interview-guide development, participant-facing flashcards, field interviews, transcription, and translation."
+    },
+    {
+      "title": "Extreme Weather Events and Unsafe Migration in FDMN Camps",
+      "funder": "Mixed-methods study, icddr,b",
+      "description": "Research on how extreme weather shapes unsafe migration, supported through survey and qualitative tool development for FGDs, KIIs, and IDIs."
+    },
+    {
+      "title": "Salinity Exposure, Maternal Nutrition, and Low Birth Weight",
+      "funder": "Bangladesh Medical Research Council (BMRC)",
+      "description": "A case-control study in coastal Bangladesh, supported through budgeting, data-collection tool development, and manuscript co-authorship."
+    },
+    {
+      "title": "Non-communicable Diseases among COVID-19 Survivors and the General Population",
+      "funder": "UGC HEAT Project",
+      "description": "Contributed to proposal development and successful funding acquisition."
+    },
+    {
+      "title": "Nationwide HPV Vaccine Coverage Evaluation Survey among Adolescent Girls",
+      "funder": "World Health Organization (WHO)",
+      "description": "Led qualitative research activities in Dhaka, including tool design and interviews, with responsibility for analysis and final reporting."
+    },
+    {
+      "title": "Formative Research on Intrauterine Device Use in Bangladesh",
+      "funder": "Jhpiego and UNFPA",
+      "description": "Developed budgets and data-collection tools; conducted qualitative and quantitative fieldwork in Bhola, Sunamganj, and Khagrachari; and contributed to reporting."
+    },
+    {
+      "title": "Regional Food Security Disparities and Food Price Fluctuations",
+      "funder": "CTRG 2024–2025 Research Grant",
+      "description": "Conducted qualitative and quantitative research across Dhaka, Chattogram, Rangpur, and Barishal and supported report and proposal development."
+    }
   ],
   "experience": [
-    { "period": "Aug 2025—Present", "role": "Guest Worker (Research)", "organization": "NSU Global Health Institute, NSU", "description": "Develops proposals, coordinates submissions and stakeholder activities, supports manuscripts, and conducts and analyzes qualitative field research." },
-    { "period": "Jan—Jul 2025", "role": "Research Assistant", "organization": "NSU Global Health Institute, NSU", "description": "Developed proposals, budgets and data-collection tools; conducted KII, IDI, FGD and quantitative data collection; supported ethics and reporting." },
-    { "period": "Jul—Dec 2024", "role": "Graduate Assistant", "organization": "Department of Public Health, NSU", "description": "Supported teaching, assessment, records and module development while tutoring and mentoring students." },
-    { "period": "Feb—Sep 2024", "role": "Lecturer (Part-time)", "organization": "Green Field School & College", "description": "Delivered biology lessons and developed instructional materials, quizzes, tests and assessments." },
-    { "period": "Nov 2022—Mar 2023", "role": "Intern", "organization": "Environmental Intervention Unit, ICDDR’B", "description": "Supported literature review, reporting, manuscript development and transcription, and attended Asia Shelter Forum 2022." },
-    { "period": "Oct 2021—Dec 2022", "role": "Research Assistant", "organization": "Department of Biochemistry & Microbiology, NSU", "description": "Presented research, guided thesis students and conducted microbiological laboratory activities." }
+    {
+      "period": "Aug 2025–Jun 2026",
+      "role": "Research Assistant",
+      "organization": "Environmental Health and WASH, HSPSD · icddr,b",
+      "description": "Supported mixed-methods environmental-health research, manuscripts, field operations, and collaboration.",
+      "details": [
+        "Authored, formatted, and finalized manuscripts for journal submission in line with publisher requirements.",
+        "Developed qualitative interview guides, survey questionnaires, and participant-facing research materials.",
+        "Conducted interviews and field visits and managed transcription and translation workflows.",
+        "Coordinated with external collaborators and participated in technical training and cross-functional research activities."
+      ]
+    },
+    {
+      "period": "Aug 2025–Jun 2026",
+      "role": "Research Officer",
+      "organization": "NSU Global Health Institute · North South University",
+      "description": "Supported research, institutional operations, proposal development, and scholarly communication.",
+      "details": [
+        "Supported website management, administration, annual audit activities, and manuscripts for peer-reviewed journals.",
+        "Developed funding proposals, project budgets, and data-collection tools.",
+        "Led qualitative components of the nationwide HPV vaccine coverage study in Dhaka.",
+        "Contributed to qualitative analysis, final reporting, and funded research collaborations."
+      ]
+    },
+    {
+      "period": "Jan–Jul 2025",
+      "role": "Research Assistant",
+      "organization": "NSU Global Health Institute · North South University",
+      "description": "Supported reproductive-health and food-security studies from tool development through fieldwork and reporting.",
+      "details": [
+        "Developed project budgets and qualitative and quantitative data-collection tools.",
+        "Facilitated KIIs, IDIs, FGDs, and surveys across multiple districts of Bangladesh.",
+        "Conducted field research across Dhaka, Chattogram, Rangpur, Barishal, Bhola, Sunamganj, and Khagrachari.",
+        "Contributed to reports and prepared proposals for funding collaborations."
+      ]
+    },
+    {
+      "period": "Jul–Dec 2024",
+      "role": "Graduate Teaching Assistant",
+      "organization": "Department of Public Health · North South University",
+      "description": "Supported teaching delivery, course administration, and student learning.",
+      "details": [
+        "Assisted with classes, examinations, grading, records, course development, attendance, office hours, and internship field trips.",
+        "Provided tutoring, academic guidance, and responses to student inquiries in and beyond class."
+      ]
+    },
+    {
+      "period": "Feb–Sep 2024",
+      "role": "Lecturer, Biology",
+      "organization": "Green Field School & College",
+      "description": "Delivered curriculum-aligned biology teaching and assessment.",
+      "details": [
+        "Prepared lesson plans and instructional materials aligned with curriculum guidance.",
+        "Designed and administered quizzes, tests, and evaluations of biological concepts."
+      ]
+    },
+    {
+      "period": "Nov 2022–Mar 2023",
+      "role": "Intern",
+      "organization": "Environmental Intervention Unit · icddr,b",
+      "description": "Supported environmental-health research and humanitarian activities.",
+      "details": [
+        "Contributed to literature reviews, transcription, project reports, research analysis, and manuscript development.",
+        "Assisted activities in humanitarian settings."
+      ]
+    }
   ],
   "education": [
-    { "degree": "Master of Public Health (MPH)", "school": "North South University", "period": "2023—2024", "grade": "GPA 3.73 / 4.00", "award": "100% scholarship" },
-    { "degree": "Bachelor of Science in Microbiology", "school": "North South University", "period": "2018—2022", "grade": "GPA 3.15 / 4.00", "award": "100% scholarship" }
+    {
+      "degree": "Master of Public Health",
+      "school": "North South University",
+      "period": "Jul 2023–Dec 2024",
+      "grade": "GPA 3.73 / 4.00",
+      "award": "100% scholarship",
+      "thesis": "Assessing Climate Change Vulnerability among Farmers in North-Western Drought-Prone Bangladesh",
+      "coursework": "Clinical Epidemiology · Environmental Health · Epidemiology II · Data Management and Analysis · Biostatistics · Public Health Information, Education and Communication"
+    },
+    {
+      "degree": "Bachelor of Science in Microbiology",
+      "school": "North South University",
+      "period": "Jan 2018–Dec 2022",
+      "grade": "GPA 3.15 / 4.00",
+      "award": "100% scholarship",
+      "thesis": "Identification and Characterization of Amylase-Producing Bacteria from Vegetative Soil in Dhaka City",
+      "coursework": "Infectious Diseases and Diagnostic Microbiology · Introduction to Environmental Health"
+    }
   ],
   "skills": [
-    { "label": "Quantitative tools", "items": "Stata · SPSS · Microsoft Excel" }, { "label": "Qualitative methods", "items": "FGD · KII · IDI · Thematic analysis" }, { "label": "Research cycle", "items": "Study design · Fieldwork · Analysis · Proposals · Reporting · Manuscripts" }, { "label": "Languages", "items": "Bangla · English" }
+    { "label": "Quantitative analysis", "items": "Stata · SPSS · Data cleaning · Data analysis" },
+    { "label": "Research methods", "items": "Surveys · FGD · KII · IDI · Mixed-methods fieldwork · Transcription · Translation" },
+    { "label": "Research communication", "items": "Proposal development · Reports · Manuscript preparation · Journal formatting" },
+    { "label": "Languages", "items": "Bangla · English" }
   ],
   "conferences": [
-    { "title": "Effect of Metal-Ions on the Enzymatic Efficiency of Amylase and Protease from Producer KTH 205", "venue": "International Biotechnology Conference, ICB 2025 · BRAC University" },
-    { "title": "Characterization of Amylase Producing Bacteria Isolated from Soil Sample", "venue": "2nd International Conference on Genomics, Nanotech and Bioengineering, ICGNB 2022 · North South University" }
+    {
+      "title": "Effect of Metal-Ions on the Enzymatic Efficiency of Amylase and Protease from Producer KTH 205",
+      "venue": "International Biotechnology Conference (ICB 2025) · BRAC University · 20–21 June 2025"
+    },
+    {
+      "title": "Characterization of Amylase-Producing Bacteria Isolated from Soil Sample",
+      "venue": "2nd International Conference on Genomics, Nanotech and Bioengineering (ICGNB 2022) · North South University · 26–28 June 2022"
+    }
   ],
-  "courses": ["Research Design and Tools for Assessing Brain Vulnerability in Human Subjects · Jan 2026", "Systematic Review & Meta Analysis, NGHI · Nov 2025", "Workshop on Scientific Manuscript Writing, NGHI · Mar 2025", "Research4Life: Hinari & e-research, ICDDR’B · Dec 2022"]
+  "publications": [
+    {
+      "title": "Characterization of Amylase-Producing Bacteria Isolated from Soil Sample",
+      "status": "Manuscript under review"
+    }
+  ],
+  "courses": [],
+  "awards": [
+    "Received 100% scholarships for both bachelor’s and master’s programs.",
+    "Received national awards in painting and handwriting."
+  ],
+  "leadership": [
+    "Sub-Committee Member, Public Health Promotion and Development Society (PPDS)",
+    "Sub-Executive Member, North South University Art and Photography Club (NSUAPC)",
+    "Hosted and organized INTRA 2020 and 2021, IIUPE 2021, and the International Conference on the Rohingya Crisis in Bangladesh in collaboration with UNHCR",
+    "Official Photographer, NSU Club Fair 2018",
+    "Lab-star, Department of Biochemistry and Microbiology, North South University",
+    "Supported laboratory classes and student management"
+  ]
 }

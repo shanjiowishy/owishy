@@ -68,6 +68,7 @@ content:
       - { name: phone, label: Phone, type: string }
       - { name: location, label: Location, type: string }
       - { name: linkedin, label: LinkedIn URL, type: string }
+      - { name: researchInterests, label: Research interests, type: string, list: true }
       - name: research
         label: Funded research
         type: object
@@ -85,6 +86,7 @@ content:
           - { name: role, label: Role, type: string }
           - { name: organization, label: Organization, type: string }
           - { name: description, label: Description, type: text }
+          - { name: details, label: Responsibilities, type: string, list: true }
       - name: education
         label: Education
         type: object
@@ -95,6 +97,8 @@ content:
           - { name: period, label: Period, type: string }
           - { name: grade, label: Grade, type: string }
           - { name: award, label: Award, type: string }
+          - { name: thesis, label: Thesis, type: text }
+          - { name: coursework, label: Relevant coursework, type: text }
       - name: skills
         label: Skills
         type: object
@@ -109,4 +113,12 @@ content:
         fields:
           - { name: title, label: Paper title, type: text }
           - { name: venue, label: Venue, type: string }
+      - name: publications
+        label: Publications
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: text }
+          - { name: status, label: Status, type: string }
       - { name: courses, label: Short courses, type: string, list: true }
+      - { name: awards, label: Awards, type: string, list: true }

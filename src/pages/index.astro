@@ -5,43 +5,67 @@ import SiteHeader from '../components/SiteHeader.astro';
 import profile from '../data/profile.json';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf());
-const researchInterests = ['Vaccine coverage and implementation', 'Sexual and reproductive health', 'Food security and health equity', 'Qualitative and mixed-methods research', 'Microbiology and infectious disease'];
-const experienceDetails = [
-  ['Develops research proposals and coordinates funding submissions.', 'Organizes workshops, seminars and stakeholder meetings.', 'Supports manuscript writing, journal submission and project monitoring.', 'Conducts and analyzes qualitative field research, including FGDs, KIIs and IDIs.'],
-  ['Developed proposals, project budgets and data-collection tools.', 'Conducted qualitative and quantitative data collection.', 'Completed literature reviews, ethics documentation, reports and manuscripts.', 'Supported research meetings, workshops and conferences.'],
-  ['Supported classroom instruction, assessment, records and course planning.', 'Assisted faculty members with module development and student mentoring.'],
-  ['Delivered biology lessons and prepared lesson plans and instructional materials.', 'Designed quizzes, tests and other assessments.'],
-  ['Supported report drafting, literature review, manuscript development and transcription.', 'Attended Asia Shelter Forum 2022.'],
-  ['Presented research at ICGNB 2022 and supported thesis students.', 'Conducted microbiological laboratory work including bacterial isolation, cultivation media and biochemical tests.']
-];
 ---
-<PortfolioLayout title={`${profile.name} � Public Health Researcher`} description={profile.about}>
+<PortfolioLayout title={`${profile.name} — Public Health Researcher`} description={profile.about}>
   <SiteHeader />
   <main id="main" class="cv-page">
     <header class="cv-intro" id="about">
-      <div class="cv-intro-copy"><h1>{profile.name}</h1>
-        <p class="cv-role">Public Health Researcher | Microbiology | Epidemiology | Qualitative Research</p>
-        <p class="cv-contact"><a href={`mailto:${profile.email}`}>{profile.email}</a><span>{profile.phone}</span><span>{profile.location}</span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></p>
-        <p class="cv-summary">{profile.about} I am currently working as a Guest Worker (Research) at the NSU Global Health Institute.</p>
-        <a class="cv-download" href={`${base}Shanjida-Farzana-Owishy-CV.pdf`} download>Download CV</a></div>
+      <div class="cv-intro-copy">
+        <h1>{profile.name}</h1>
+        <p class="cv-role">Public Health Researcher | Environmental Epidemiology | Mixed-Methods Research</p>
+        <p class="cv-contact">
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          <a href={`mailto:${profile.secondaryEmail}`}>{profile.secondaryEmail}</a>
+          <span>{profile.phone}</span>
+          <span>{profile.location}</span>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p class="cv-summary">{profile.about}</p>
+        <a class="cv-download" href={`${base}Shanjida-Farzana-Owishy-CV.pdf`} download>Download CV</a>
+      </div>
       <figure class="profile-photo"><img src={`${base}images/shanjida-farzana-owishy.png`} alt="Shanjida Farzana Owishy" width="300" height="319" /></figure>
     </header>
 
-    <section class="cv-section" id="interests" data-reveal><h2>Research Interests</h2><ul class="interest-plain">{researchInterests.map((interest) => <li>{interest}</li>)}</ul></section>
+    <section class="cv-section" id="interests" data-reveal>
+      <h2>Research Interests</h2>
+      <ul class="interest-plain">{profile.researchInterests.map((interest) => <li>{interest}</li>)}</ul>
+    </section>
 
-    <section class="cv-section" id="research" data-reveal><h2>Funded Research</h2><div class="cv-list">{profile.research.map((item) => <article><h3>{item.title}</h3><p class="cv-meta">{item.funder}</p><p>{item.description}</p></article>)}</div></section>
+    <section class="cv-section" id="research" data-reveal>
+      <h2>Selected Research</h2>
+      <div class="cv-list">{profile.research.map((item) => <article><h3>{item.title}</h3><p class="cv-meta">{item.funder}</p><p>{item.description}</p></article>)}</div>
+    </section>
 
-    <section class="cv-section" id="experience" data-reveal><h2>Research and Work Experience</h2><div class="cv-list experience-list">{profile.experience.map((item, index) => <article><div class="cv-entry-heading"><div><h3>{item.role}</h3><p class="cv-meta">{item.organization}</p></div><time>{item.period}</time></div><ul>{experienceDetails[index].map((detail) => <li>{detail}</li>)}</ul></article>)}</div></section>
+    <section class="cv-section" id="experience" data-reveal>
+      <h2>Research and Work Experience</h2>
+      <div class="cv-list experience-list">{profile.experience.map((item) => <article><div class="cv-entry-heading"><div><h3>{item.role}</h3><p class="cv-meta">{item.organization}</p></div><time>{item.period}</time></div><p>{item.description}</p><ul>{item.details.map((detail) => <li>{detail}</li>)}</ul></article>)}</div>
+    </section>
 
-    <section class="cv-section" id="education" data-reveal><h2>Education</h2><div class="cv-list education-list">{profile.education.map((item) => <article><div class="cv-entry-heading"><div><h3>{item.degree}</h3><p class="cv-meta">{item.school}</p></div><time>{item.period}</time></div><p>{item.grade} � {item.award}</p></article>)}</div></section>
+    <section class="cv-section" id="education" data-reveal>
+      <h2>Education</h2>
+      <div class="cv-list education-list">{profile.education.map((item) => <article><div class="cv-entry-heading"><div><h3>{item.degree}</h3><p class="cv-meta">{item.school}</p></div><time>{item.period}</time></div><p>{item.grade} · {item.award}</p><p><strong>Thesis:</strong> {item.thesis}</p><p><strong>Relevant coursework:</strong> {item.coursework}</p></article>)}</div>
+    </section>
 
-    <section class="cv-section two-column" id="methods" data-reveal><div><h2>Research Skills</h2><div class="definition-list">{profile.skills.map((skill) => <div><h3>{skill.label}</h3><p>{skill.items}</p></div>)}</div></div><div><h2>Selected Short Courses</h2><ul>{profile.courses.map((course) => <li>{course}</li>)}</ul></div></section>
+    <section class="cv-section" id="methods" data-reveal>
+      <h2>Research Skills</h2>
+      <div class="definition-list">{profile.skills.map((skill) => <div><h3>{skill.label}</h3><p>{skill.items}</p></div>)}</div>
+    </section>
 
-    <section class="cv-section" id="publications" data-reveal><h2>Conference Papers</h2><div class="cv-list">{profile.conferences.map((item) => <article><h3>{item.title}</h3><p>{item.venue}</p></article>)}</div></section>
+    <section class="cv-section" id="publications" data-reveal>
+      <h2>Publications and Conference Papers</h2>
+      <div class="publication-group"><h3>Under Review</h3><div class="cv-list">{profile.publications.map((item) => <article><h3>{item.title}</h3><p class="cv-meta">{item.status}</p></article>)}</div></div>
+      <div class="publication-group"><h3>Conference Papers</h3><div class="cv-list">{profile.conferences.map((item) => <article><h3>{item.title}</h3><p>{item.venue}</p></article>)}</div></div>
+    </section>
 
-    <section class="cv-section two-column" data-reveal><div><h2>Awards</h2><ul><li>Received 100% scholarships for both BSc and MPH programs.</li><li>Received national awards in Painting and Handwriting.</li></ul></div><div><h2>Leadership and Activities</h2><ul><li>Sub-Committee Member, Public Health Promotion & Development Society.</li><li>Sub-Executive Member, North South University Art & Photography Club.</li><li>Lab-star, Department of Biochemistry & Microbiology, NSU.</li></ul></div></section>
+    <section class="cv-section two-column" data-reveal>
+      <div><h2>Awards</h2><ul>{profile.awards.map((award) => <li>{award}</li>)}</ul></div>
+      <div><h2>Leadership and Volunteering</h2><ul>{profile.leadership.map((item) => <li>{item}</li>)}</ul></div>
+    </section>
 
-    <section class="cv-section" id="writing" data-reveal><div class="cv-section-heading"><h2>Blog</h2><a href={`${base}blog/`}>View all posts</a></div><div class="writing-list">{posts.map((post) => <article><time>{post.data.publishedDate.toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' })}</time><div><h3><a href={`${base}blog/${post.id}/`}>{post.data.title}</a></h3><p>{post.data.description}</p></div></article>)}</div></section>
+    <section class="cv-section" id="writing" data-reveal>
+      <div class="cv-section-heading"><h2>Blog</h2><a href={`${base}blog/`}>View all posts</a></div>
+      <div class="writing-list">{posts.map((post) => <article><time>{post.data.publishedDate.toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' })}</time><div><h3><a href={`${base}blog/${post.id}/`}>{post.data.title}</a></h3><p>{post.data.description}</p></div></article>)}</div>
+    </section>
   </main>
-  <footer><span>� {new Date().getFullYear()} {profile.name}</span><span>{profile.email}</span></footer>
+  <footer><span>© {new Date().getFullYear()} {profile.name}</span><span>{profile.email}</span></footer>
 </PortfolioLayout>
