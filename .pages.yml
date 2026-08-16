@@ -122,3 +122,4 @@ content:
           - { name: status, label: Status, type: string }
       - { name: courses, label: Short courses, type: string, list: true }
       - { name: awards, label: Awards, type: string, list: true }
+      - { name: leadership, label: Leadership and volunteering, type: string, list: true }
